@@ -9,9 +9,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $descricao  = filter_input(INPUT_POST, 'descricao', FILTER_SANITIZE_SPECIAL_CHARS);
     $status     = $_POST['status'];
     $data     = $_POST['data'];
-    $data     = $_POST['valor_total'];
+    $valor_total     = $_POST['valor_total'];
 
-    if (saveOS($cliente_id, $veiculo_id, $usuario_id, $descricao, $status, $data)) {
+    if (saveOS($cliente_id, $veiculo_id, $usuario_id, $descricao, $status, $data, $valor_total)) {
         header("Location: index.php?msg=" . urlencode("OS gerada com sucesso!"));
     } else {
         header("Location: nova_os.php?error=" . urlencode("Erro ao gerar Ordem de Serviço."));

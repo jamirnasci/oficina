@@ -1,7 +1,7 @@
-<div th:fragment="sideBar" class="wrapper">
+<div class="wrapper">
     <nav id="sidebar" class="d-flex flex-column bg-dark">
         <div class="sidebar-header d-flex align-items-center text-light">
-            <i class="fa-solid fa-chart-line me-2"></i> Oficina
+            <i class="fa-solid fa-toolbox me-2"></i> OFICINA
         </div>
         <ul class="nav flex-column mb-auto mt-3">
             <li class="nav-item">
@@ -11,17 +11,17 @@
             </li>
             <li class="nav-item">
                 <a href="/oficina/veiculos" class="nav-link text-light">
-                    <i class="fa-solid fa-box"></i> Veículos
+                    <i class="fa-solid fa-car"></i> Veículos
                 </a>
             </li>
             <li class="nav-item">
                 <a href="/oficina/ordens" class="nav-link text-light">
-                    <i class="fa-solid fa-cart-shopping"></i> Ordens
+                    <i class="fa-solid fa-wrench"></i> Ordens
                 </a>
             </li>
             <li class="nav-item">
                 <a href="/oficina/pagamentos" class="nav-link text-light">
-                    <i class="fa-solid fa-comments"></i> Pagamentos
+                    <i class="fa-solid fa-money-bill"></i> Pagamentos
                 </a>
             </li>
             <li class="nav-item">
@@ -36,7 +36,7 @@
             </li>
         </ul>
 
-        <div class="border-top bg-danger">
+        <div class="bg-danger">
             <a href="/oficina/auth/logout.php" class="nav-link logout text-light">
                 <i class="fa-solid fa-right-from-bracket"></i> Logout
             </a>
