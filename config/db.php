@@ -29,7 +29,7 @@ class Database
         return self::$instance;
     }
 
-    public function createDB()
+    public static function createDB()
     {
 
         try {
@@ -69,6 +69,7 @@ class Database
             placa VARCHAR(10) NOT NULL UNIQUE,
             modelo VARCHAR(100),
             marca VARCHAR(100),
+            cor VARCHAR(50) NOT NULL,
             ano INT,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -84,7 +85,9 @@ class Database
             veiculo_id INT NOT NULL,
             usuario_id INT NOT NULL,
             descricao TEXT,
-            status ENUM('aberta', 'diagnostico', 'reparo', 'finalizada') DEFAULT 'aberta',
+            status ENUM('aberta', 'diagnostico', 'reparo', 'finalizada', 'cancelada') DEFAULT 'aberta',
+            data DATE NOT NULL,
+            valor_total DECIMAL(10,2) NOT NULL,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
             FOREIGN KEY (cliente_id) REFERENCES clientes(id),
